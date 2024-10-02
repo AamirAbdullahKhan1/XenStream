@@ -3,6 +3,7 @@ import image1 from '../assets/imagedcs1.jpg';
 import image2 from '../assets/imagedcs2.jpg';
 import image3 from '../assets/imagedcs3.jpg';
 import image4 from '../assets/imagedcs4.jpg';
+import { Link } from 'react-router-dom';
 
 const images = [image1, image2, image3, image4];
 
@@ -33,8 +34,8 @@ const Landing = () => {
 
         {/* Regular Navbar for Larger Screens */}
         <ul className="hidden md:flex space-x-8">
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium">Home</a></li>
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium">About</a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium"><Link to='/'>Home</Link></a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium"><Link to='/about'>About</Link></a></li>
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium">Movies</a></li>
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium">Contact</a></li>
         </ul>
