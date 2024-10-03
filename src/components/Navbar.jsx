@@ -9,16 +9,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 shadow-md p-4 px-6 py-6 z-20 fixed w-full top-0">
+    <nav className="bg-gray-800 shadow-md p-4 px-8 py-6 z-50 fixed w-full top-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-[22px] font-bold cursor-pointer text-white">XenStream</h1>
+        <h1 className="text-[22px] font-bold cursor-pointer text-white"><Link to='/'>XenStream</Link></h1>
         
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8">
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white">Home</a></li>
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white">About</a></li>
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white">Movies</a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/'>Home</Link></a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/about'>About</Link></a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/movies'>Movies</Link></a></li>
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white">Contact</a></li>
         </ul>
 

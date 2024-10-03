@@ -4,13 +4,16 @@ import { BrowserRouter, createBrowserRouter, Link, RouterProvider } from 'react-
 import About from './pages/About'
 import NewsSection from './pages/NewsSection'
 import Navbar from './components/Navbar'
+import Movies from './pages/Movies'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: (
       <>
+        <Navbar/>
         <Landing/>
+        <NewsSection/>
       </>
     ),
   },
@@ -21,6 +24,17 @@ const router = createBrowserRouter([
       <>
         <Navbar/>
         <About/>
+      </>
+    ),
+  },
+
+  {
+    path: '/movies',
+    element: (
+      <>
+        <Navbar/>
+        <Movies/>
+        
       </>
     ),
   },
