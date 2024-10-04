@@ -18,7 +18,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    alert('Form submitted successfully!');
+    alert('Form submitted successfully!!');
     setFormData({
       name: '',
       email: '',
