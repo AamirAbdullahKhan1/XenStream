@@ -5,7 +5,6 @@ const NewsSection = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Replace with your TMDb API key
   const API_KEY = 'c93ea1cbeaa3f9989d5b33c879a12c82'; 
   const apiURL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
@@ -13,7 +12,7 @@ const NewsSection = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(apiURL);
-        setMovies(response.data.results.slice(0, 6)); // Fetch only the first 6 movies
+        setMovies(response.data.results.slice(0, 6)); // Fetches only the first 6 movies
         setLoading(false);
       } catch (error) {
         console.error("Error fetching movie data:", error);
@@ -34,7 +33,7 @@ const NewsSection = () => {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {movies.map((movie) => (
           <a
-            href={`https://www.themoviedb.org/movie/${movie.id}`} // TMDb movie page
+            href={`https://www.themoviedb.org/movie/${movie.id}`} 
             key={movie.id}
             className="relative group overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
             target="_blank"
@@ -42,7 +41,7 @@ const NewsSection = () => {
           >
             <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-opacity duration-300 z-10" />
             <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} // TMDb image link
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
               alt={movie.title}
               className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />

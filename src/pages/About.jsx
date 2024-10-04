@@ -15,8 +15,7 @@ const About = () => {
           className="absolute inset-0 w-full h-full object-cover filter brightness-50"
         />
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-4">About XenStream</h1>
-          <p className="text-lg text-gray-300">Discover the story behind our platform and meet the team.</p>
+          <h1 className="text-5xl font-bold mt-[50px]">About XenStream</h1>
         </div>
       </section>
 
@@ -46,41 +45,28 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="bg-gray-800 py-16 px-6 lg:px-16">
-        <h2 className="text-4xl font-bold text-center mb-10">Meet the Team</h2>
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Team Member 1 */}
-          <div className="text-center">
-            <img
-              src={team1}
-              alt="Team Member 1"
-              className="mx-auto w-36 h-36 object-cover rounded-full shadow-lg mb-4"
-            />
-            <h3 className="text-xl font-semibold">John Doe</h3>
-            <p className="text-gray-400">Founder & CEO</p>
-          </div>
-          {/* Team Member 2 */}
-          <div className="text-center">
-            <img
-              src={team2}
-              alt="Team Member 2"
-              className="mx-auto w-36 h-36 object-cover rounded-full shadow-lg mb-4"
-            />
-            <h3 className="text-xl font-semibold">Jane Smith</h3>
-            <p className="text-gray-400">CTO</p>
-          </div>
-          {/* Team Member 3 */}
-          <div className="text-center">
-            <img
-              src={team3}
-              alt="Team Member 3"
-              className="mx-auto w-36 h-36 object-cover rounded-full shadow-lg mb-4"
-            />
-            <h3 className="text-xl font-semibold">Alice Johnson</h3>
-            <p className="text-gray-400">Lead Developer</p>
-          </div>
-        </div>
-      </section>
+      <div className="p-8 bg-gray-900 text-white">
+
+      <h3 className="text-2xl font-semibold mt-2">APIs Used</h3>
+      <p className="mt-2 mb-4">
+        We primarily use the TMDB (The Movie Database) API to fetch movie information. Below are the details of how we integrate this API into our project:
+      </p>
+      <div className="bg-gray-800 p-4 rounded-lg">
+        <h4 className="text-xl font-bold mb-2">TMDB API</h4>
+        <p className="mb-2">
+          The TMDB API provides a rich database of movie-related information, including titles, release dates, trailers, and user ratings. We utilize this API for:
+        </p>
+        <ul className="list-disc list-inside mb-4">
+          <li>Fetching a list of popular, top-rated, and upcoming movies.</li>
+          <li>Retrieving detailed information about each movie, including its overview and release date.</li>
+          <li>Accessing trailer videos to enhance user engagement.</li>
+        </ul>
+        <p>
+          To use the TMDB API, we make GET requests to the relevant endpoints using Axios, and we parse the returned JSON data to display it in our application. Each movie card includes buttons to watch trailers and view more information, making it easy for users to navigate and find what they're looking for.
+        </p>
+      </div>
+
+    </div>
     </div>
   )
 }

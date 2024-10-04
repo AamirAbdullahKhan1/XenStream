@@ -1,48 +1,69 @@
-import { useState } from 'react'
-import Landing from './pages/Landing'
-import { BrowserRouter, createBrowserRouter, Link, RouterProvider } from 'react-router-dom'
-import About from './pages/About'
-import NewsSection from './pages/NewsSection'
-import Navbar from './components/Navbar'
-import Movies from './pages/Movies'
+import Landing from './pages/Landing';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './pages/About';
+import NewsSection from './pages/NewsSection';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import MovieDetails from './components/MovieDetails'; 
+import MoviesSection from './pages/Movies';
+import Contact from './pages/Contact';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: (
       <>
-        <Navbar/>
-        <Landing/>
-        <NewsSection/>
+        <Navbar />
+        <Landing />
+        <NewsSection />
+        <Footer />
       </>
     ),
   },
-
   {
     path: '/about',
     element: (
       <>
-        <Navbar/>
-        <About/>
+        <Navbar />
+        <About />
+        <Footer />
       </>
     ),
   },
-
   {
     path: '/movies',
     element: (
       <>
-        <Navbar/>
-        <Movies/>
-        
+        <Navbar />
+        <MoviesSection/>
+        <Footer />
       </>
     ),
   },
-])
+  {
+    path: '/contact',
+    element: (
+      <>
+        <Navbar />
+        <Contact/>
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: '/movies/:movieName', 
+    element: (
+      <>
+        <Navbar />
+        <MovieDetails /> 
+        <Footer/>
+      </>
+    ),
+  },
+]);
 
 function App() {
-    return <RouterProvider router={router} />;
-
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

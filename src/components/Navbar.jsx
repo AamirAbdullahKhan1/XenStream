@@ -19,7 +19,7 @@ const Navbar = () => {
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/'>Home</Link></a></li>
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/about'>About</Link></a></li>
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/movies'>Movies</Link></a></li>
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white">Contact</a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium text-white"><Link to='/contact'>Contact</Link></a></li>
         </ul>
 
         {/* Hamburger Menu Icon (for mobile) */}
@@ -43,8 +43,8 @@ const Navbar = () => {
         <ul className="md:hidden flex flex-col space-y-4 bg-gray-800 mt-4 p-4 text-white">
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium"><Link to='/'>Home</Link></a></li>
           <li><a href="#" className="hover:text-lime-400 duration-300 font-medium"><Link to='/about'>About</Link></a></li>
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium">Movies</a></li>
-          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium">Contact</a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium"><Link to='/movies'>Movies</Link></a></li>
+          <li><a href="#" className="hover:text-lime-400 duration-300 font-medium"><Link to='/contact'>Contact</Link></a></li>
         </ul>
       )}
     </nav>
