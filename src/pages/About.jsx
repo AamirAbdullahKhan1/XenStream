@@ -1,8 +1,5 @@
 import React from 'react'
 import aboutImage from '../assets/X.png'; // Your image file
-import team1 from '../assets/team1.png'; // Example team member images
-import team2 from '../assets/team2.jpg';
-import team3 from '../assets/team3.jpeg';
 
 const About = () => {
   return (
