@@ -9,7 +9,7 @@ const MoviesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const categories = ['popular', 'top_rated', 'upcoming'];
 
-  const apiKey = 'c93ea1cbeaa3f9989d5b33c879a12c82'; 
+  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
 
   useEffect(() => {
     fetchMovies();

@@ -5,7 +5,7 @@ const NewsSection = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const API_KEY = 'c93ea1cbeaa3f9989d5b33c879a12c82'; 
+  const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
   const apiURL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
   useEffect(() => {
